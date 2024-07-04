@@ -559,7 +559,8 @@ button:hover,
 /* LinkedIn */
 .button.button-linked {
   color: #ffffff;
-  background-color: #2867b2;
+  background-color: #0A66C2;
+  /* #2867b2*/
 }
 .button.button-linked:hover,
 .button.button-linked:focus {
@@ -1029,7 +1030,7 @@ button:hover,
 /* WhatsApp */
 .button.button-whatsapp {
   color: #ffffff;
-  background-color: #455a64;
+  background-color: #25D366;
 }
 .button.button-whatsapp:hover,
 .button.button-whatsapp:focus {
@@ -1076,4 +1077,18 @@ button:hover,
 .button.button-zoom:hover,
 .button.button-zoom:focus {
   filter: brightness(90%);
+}
+
+/* Email */
+.button.button-email {
+  color: #ffffff;
+  background-color: #4285F4;
+  border: 1px solid #FFFFFF;
+}
+
+/* Teléfono */
+.button.button-tel {
+  color: #000000;
+  background-color: #34A853;
+  border: 1px solid #FFFFFF;
 }
