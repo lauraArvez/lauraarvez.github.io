@@ -5,7 +5,7 @@ date: 2024-07-15
 
 ## Bienvenidos al Blog de un Eterno Aprendiz
 
-![Fusión de Conceptos](lauraarvez.github.io\images\Fusion_of_Concepts.png) <!-- Asegúrate de que la ruta sea correcta -->
+![Fusión de Conceptos](lauraarvez.github.io\blog\images\Fusion_of_Concepts.png) <!-- Asegúrate de que la ruta sea correcta -->
 ¡Hola a todos! Soy Laura Arvez y estoy encantada de darles la bienvenida a mi blog. Aquí compartiré mi continuo aprendizaje y crecimiento personal.
 
 ## ¿Qué Puedes Esperar?
