@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="refresh" content="0; url=/docs/" />
-  <meta charset="utf-8">
-  <title>Laura Arvez Blog</title>
-</head>
-<body>
-  <p>If you are not redirected automatically, follow the <a href="/docs/">link to the blog</a>.</p>
-</body>
-</html>
+---
+layout: default
+title: Blog
+---
+
+<h1>Blog de Laura Arvez</h1>
+<p>Explora publicaciones sobre desarrollo backend, bases de datos y más.</p>
+
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+  </li>
+  {% endfor %}
+</ul>
+
+<a href="../index.html">Volver a la página principal</a>
+
