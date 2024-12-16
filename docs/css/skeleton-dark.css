@@ -4,158 +4,27 @@
 * Built using Skeleton V2.0.4
 */
 
-/* Grid */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-@media (min-width: 400px) {
-  .container {
-    width: 85%;
-  }
-}
-@media (min-width: 550px) {
-  .container {
-    width: 80%;
-  }
+/* Reset General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Base Styles */
-html {
-  font-size: 100%;
-  color-scheme: dark;
-}
-body {
-  background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
-  color: #ffffff;
-  font-family: "Roboto", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-/* Typography */
-h1, h2, h3 {
-  color: #00bcd4;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-shadow: 1px 1px 3px rgba(0, 188, 212, 0.5); /* Sombra ligera */
-  margin-bottom: 20px;
-}
-
-h3:hover {
-  color: #4caf50; /* Efecto hover en verde */
-  transition: color 0.3s ease-in-out;
-}
-
-/* Links */
-a {
-  color: #4899F7;
-  text-decoration: none;
-}
-a:hover {
-  color: #4caf50; /* Verde al pasar el cursor */
-  transition: color 0.3s ease-in-out;
-}
-
-/* Buttons */
-.button {
-  background-color: #00bcd4;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  margin-top: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-.button:hover {
-  background-color: #4caf50;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Avatar */
-.avatar {
-  width: 128px;
-  height: 128px;
-  object-fit: cover;
-  background-position: center;
-  border-radius: 50%;
-}
-
-/* Separators */
-hr {
-  border: 0;
-  height: 2px;
-  background: linear-gradient(to right, #00bcd4, #4caf50);
-  margin: 20px 0;
-}
-
-/* Paragraphs */
-p {
-  margin-bottom: 20px; /* Espaciado adicional entre párrafos */
-}
-
-/* Sections */
-.section {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.section p {
-  color: #e0e0e0;
-  font-size: 16px;
-}
-
-/* Footer */
-footer {
-  margin-top: 30px;
-  text-align: center;
-  font-size: 14px;
-  color: #7AB8FF;
-}
-
-footer a:hover {
-  color: #4caf50; /* Verde al pasar el cursor */
-}
-
-/* Fondo que cubre toda la pantalla */
 html, body {
     height: 100%; /* Extiende el fondo */
-    margin: 0; /* Elimina márgenes */
+    margin: 0;
     padding: 0;
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+    font-family: "Roboto", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
 }
 
+/* Contenedor Principal */
 .container {
     min-height: 100vh; /* Ocupa al menos toda la pantalla */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-/* Footer siempre alineado */
-footer {
-    margin-top: auto;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #7AB8FF;
-}
-
-footer a:hover {
-    color: #4caf50;
-}
-
+    justify-content: 
