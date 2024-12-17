@@ -132,9 +132,19 @@ a:focus {
 }         
 
 /* Link Color Dark Theme */
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   a {
     color: #4899F7;
+}*/
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e0e0e0; /* Texto más claro */
+        background: #121212; /* Fondo oscuro */
+    }
+
+    a {
+        color: #4fc3f7; /* Azul más visible */
+    }
 }
 a:hover {
   color: #7AB8FF;
