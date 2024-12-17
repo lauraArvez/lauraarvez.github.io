@@ -1,25 +1,33 @@
-/* Asegura que el fondo y contenido ocupen toda la pantalla */
+/* Reset General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo que ocupa toda la pantalla */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
     display: flex;
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-    text-align: center; /* Centrado del texto */
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    text-align: center;
+    font-family: "Roboto", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
 }
 
-/* Contenedor principal */
+/* Contenedor Principal */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 600px; /* Controla el ancho del contenido */
-    width: 100%;
+    min-height: 100vh; /* Asegura altura completa */
     padding: 20px;
-    box-sizing: border-box;
 }
 
 /* Encabezados */
@@ -27,7 +35,16 @@ h1, h2, h3 {
     color: #00bcd4;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    margin-bottom: 20px;
     text-shadow: 1px 1px 3px rgba(0, 188, 212, 0.5);
+}
+
+h3 {
+    font-size: 28px;
+}
+
+/* Párrafos */
+p {
     margin-bottom: 20px;
 }
 
@@ -50,14 +67,31 @@ h1, h2, h3 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Avatar */
+.avatar {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
 /* Footer */
 footer {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: auto;
+    padding: 10px;
     font-size: 14px;
     color: #7AB8FF;
 }
 
 footer a:hover {
     color: #4caf50;
+}
+
+/* Separador */
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #00bcd4, #4caf50);
+    margin: 20px 0;
 }
