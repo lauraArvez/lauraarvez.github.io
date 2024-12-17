@@ -135,3 +135,34 @@ hr {
     background: linear-gradient(to right, #00bcd4, #4caf50);
     margin: 20px 0;
 }
+
+/* Modo Oscuro */
+@media (prefers-color-scheme: dark) {
+    html, body {
+        background: #121212; /* Fondo oscuro */
+        color: #ffffff; /* Texto blanco */
+    }
+
+    h1, h2, h3, p, a {
+        color: #ffffff; /* Asegura que los encabezados, párrafos y enlaces sean blancos */
+    }
+
+    a:hover {
+        color: #7AB8FF; /* Enlaces más claros al pasar el mouse */
+    }
+
+    .button {
+        background-color: #00bcd4; /* Color de botones en modo oscuro */
+        color: #ffffff;
+    }
+
+    .button:hover {
+        background-color: #4caf50; /* Botones cambian a verde al pasar el mouse */
+    }
+
+    hr {
+        background: linear-gradient(to right, #00bcd4, #4caf50); /* Separador con degradado */
+        border: none;
+        height: 2px;
+    }
+}
