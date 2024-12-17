@@ -1,34 +1,74 @@
-/* Reset General */
+/* Reset de estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fondo que ocupa toda la pantalla */
+/* Fondo principal que cubre toda la pantalla */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+    font-family: "Open Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrado vertical */
-    align-items: center; /* Centrado horizontal */
-    text-align: center;
-    font-family: "Roboto", "HelveticaNeue", Helvetica, Arial, sans-serif;
-    color: #ffffff;
+    justify-content: space-between; /* Distribuye contenido */
 }
 
-/* Contenedor Principal */
+/* Contenedor principal centrado */
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Asegura altura completa */
+    text-align: center;
+    min-height: 100vh;
     padding: 20px;
 }
+
+/* Footer siempre en la parte inferior */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px 0;
+    color: #7AB8FF;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #4caf50;
+}
+
+/* Encabezados */
+h3 {
+    color: #00bcd4;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 188, 212, 0.5);
+}
+
+/* Botones */
+.button {
+    background-color: #00bcd4;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 
 /* Encabezados */
 h1, h2, h3 {
