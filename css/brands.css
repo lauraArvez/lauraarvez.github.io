@@ -598,3 +598,28 @@
 	--button-background:#0B5CFF;
   --button-border:1px solid #FFFFFF;
 }
+
+/* Botones personalizados */
+.button-portfolio {
+   /* --button-background: #00e6e6; /* turquesa para Portfolio */
+  /*  --button-text: #ffffff;*/
+	--button-text:hsl(0, 100%, 0%);
+	--button-background:#eac41a;
+    --button-border: none;
+}
+
+.button-certificados {
+   /* --button-background: #e6007a; /* Rosa para Certificados */
+  /*  --button-text: #ffffff;*/
+	--button-text:#ffffff;
+	--button-background:#3faee8;
+    --button-border: none;
+}
+
+.button-blog {
+    /*--button-background: #00c853; /* Verde para Blog */
+    /*--button-text: #ffffff;*/
+	--button-text:#ffffff;
+	--button-background:#05c264;
+    --button-border: none;
+}

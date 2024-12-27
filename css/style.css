@@ -134,9 +134,34 @@ h1 {
 	overflow-wrap:break-word;
 }
 body {
-	font-size:var(--scale-1);           /* 20px */
-  	line-height:1.6;
+	/*font-size:var(--scale-1);           /* 20px */
+	/*line-height:1.6;*/
+	background: linear-gradient(135deg, #000000, #00ebf4, #000000,#00ebf4); /* Colores del logo */
+    background-size: 300% 300%; /* Para un efecto más dinámico */
+    background-attachment: fixed; /* Fija el fondo */
+    animation: gradient-animation 10s ease infinite; /* Animación opcional */
+    color: #ffffff;
+    font-family: "Open Sans", system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+/* Animación opcional del gradiente */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+	
 .container p {
 	margin:0 0 var(--spacing-xl) 0;
 	font-size:var(--scale-1);
@@ -204,7 +229,7 @@ a:hover {
 	cursor:pointer;
 	box-sizing:border-box;
 	hyphens:auto;               	/* Delete this to remove automatic hyphen on line break */
-  	margin-bottom:1rem;
+  	margin-bottom:2rem;
 	text-align:center;
 	line-height:1.3;
 }
@@ -221,8 +246,8 @@ a:hover {
 /* Avatar
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
+	width: 9.375rem;             /* 8rem =128px y 9.375rem es 150px*/
+	height: 9.375rem;
 	object-fit: cover;
 	background-position: center;
 	margin-bottom: var(--spacing-l);
