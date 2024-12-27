@@ -195,18 +195,8 @@ body {
 	margin-bottom:var(--spacing-m);
 }
 footer {
-	/*margin:var(--spacing-xl) 0;*/         	/* 3rem (48px) top and bottom */
+	margin:var(--spacing-xl) 0;        	/* 3rem (48px) top and bottom */
 	
-    text-align: center; /* Asegura que el texto esté centrado */
-    margin-top: auto; /* Empuja el footer hacia la parte inferior */
-    padding: 1rem 0; /* Espaciado interno */
-    font-size: 0.875rem; /* Tamaño del texto */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    position: absolute; /* Fija el footer */
-    bottom: 0; /* Coloca el footer al final */
-    left: 50%; /* Centra el footer horizontalmente */
-    transform: translateX(-50%); /* Ajusta para el centrado */
-
 }
 }
 
