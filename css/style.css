@@ -20,6 +20,15 @@ body {
   font-size: 16px;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  transition: all 0.2s ease;
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -73,6 +82,11 @@ header.hero p {
   font-weight: 600;
 }
 
+.nav a:hover {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
 .section {
   padding: 3rem 1rem;
 }
@@ -89,7 +103,7 @@ header.hero p {
   text-align: center;
 }
 
-.tech-icons {
+.skills .tech-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -104,6 +118,11 @@ header.hero p {
   border-radius: 4px;
   font-size: 0.95rem;
   box-shadow: var(--soft-shadow);
+  display: inline-block;
+}
+
+.skills h2 {
+  text-align: center;
 }
 
 .project-grid {
