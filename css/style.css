@@ -242,38 +242,38 @@ body {
 }
 
 /* ----------- RESPONSIVE ----------- */
+/* ----------- RESPONSIVE ----------- */
 @media (max-width: 768px) {
   .layout {
-    flex-direction: column;
+    flex-direction: row; /* ¡Mantenemos la estructura de escritorio! */
   }
 
   .sidebar {
-    position: relative;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 1rem;
+    width: 80px; /* Más estrecha pero sigue vertical */
+    padding: 1rem 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .sidebar .avatar {
     width: 60px;
     height: 60px;
-    margin: 0;
+    margin-bottom: 1rem;
   }
 
   .side-nav ul {
     display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  .side-nav li {
-    margin: 0;
+  .side-nav a {
+    font-size: 1rem;
   }
 
   .content {
-    margin-left: 0;
-    padding: 2rem 1.2rem;
+    margin-left: 80px;
+    padding: 2rem 1rem;
   }
 
   .hero h1 {
