@@ -4,93 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Laura Arvez | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="hero-vertical">
-  <div class="container header-flex">
-    <img src="images/avatar_la.png" alt="Laura Arvez" class="avatar">
-    <div class="intro-text">
-      <h1>Laura Arvez</h1>
-      <p class="subtitle">Desarrolladora Java | APIs REST | Spring Boot | SQL</p>
-    </div>
+  <div class="layout">
+    <aside class="sidebar">
+      <img src="images/avatar_la.png" alt="Laura Arvez" class="avatar">
+      <nav class="side-nav">
+        <ul>
+          <li><a href="#sobre">Sobre mí</a></li>
+          <li><a href="#tecnologias">Tecnologías</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="hero">
+        <h1><span class="nombre">Laura</span> <span class="apellido">Arvez</span></h1>
+        <p class="tagline">Desarrolladora Java | APIs REST | Spring Boot | SQL | IA y Big Data</p>
+      </section>
+
+      <section class="about section" id="sobre">
+        <h2>Sobre mí</h2>
+        <p>
+          Graduada en Desarrollo de Aplicaciones Multiplataforma (DAM) y actualmente cursando una especialización en Inteligencia Artificial y Big Data. Me gusta construir soluciones backend sólidas, limpias y mantenibles con tecnologías como Java, Spring Boot y SQL.
+        </p>
+      </section>
+
+      <section class="skills section" id="tecnologias">
+        <h2>Tecnologías</h2>
+        <div class="tech-icons">
+          <span>Java</span><span>Spring Boot</span><span>SQL</span><span>MySQL</span><span>PostgreSQL</span>
+          <span>Docker</span><span>Git</span><span>GitHub</span><span>Swagger</span><span>HTML</span>
+        </div>
+      </section>
+
+      <section class="projects section" id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="images/app-gestion-usuario-banner.png" alt="APP Gestión Usuario">
+            <h3>APP Gestión Usuario</h3>
+            <p>API REST para gestionar usuarios y roles.</p>
+            <a href="https://github.com/LauraArvez/app-gestion-usuario" target="_blank">Ver en GitHub</a>
+          </div>
+          <div class="project-card">
+            <img src="images/API-CRUD-Basic-banner.png" alt="API CRUD Básica">
+            <h3>API CRUD Básica</h3>
+            <p>Operaciones CRUD con Java + Spring Boot.</p>
+            <a href="https://github.com/LauraArvez/api-crud-basic" target="_blank">Ver en GitHub</a>
+          </div>
+          <div class="project-card">
+            <img src="images/udp-juego-ahorcado-banner.png" alt="UDP Ahorcado">
+            <h3>UDP - Juego del Ahorcado</h3>
+            <p>Juego clásico de consola con sockets UDP.</p>
+            <a href="https://github.com/LauraArvez/udp-juego-ahorcado" target="_blank">Ver en GitHub</a>
+          </div>
+          <div class="project-card">
+            <img src="images/balance-webapp-banner.png" alt="Balance Your Life">
+            <h3>Balance Your Life</h3>
+            <p>API REST basada en el modelo de Antoni Bolinches.</p>
+            <a href="https://github.com/LauraArvez/Balance-Your-Life-WebApp" target="_blank">Ver en GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: <a href="mailto:arvezlau@hotmail.com">arvezlau@hotmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/lauraarvez" target="_blank">linkedin.com/in/lauraarvez</a></p>
+        <p>CV: <a href="assets/CV_LauraArvez.pdf" target="_blank">Descargar PDF</a></p>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Laura Arvez · Portfolio</p>
+      </footer>
+    </main>
   </div>
-</header>
-
-  <nav class="nav">
-    <ul>
-      <li><a href="#sobre">Sobre mí</a></li>
-      <li><a href="#tecnologias">Tecnologías</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
-  <section class="about section" id="sobre">
-  <div class="container">
-    <h2 class="section-title">Sobre mí</h2>
-    <p class="bio">
-      Soy <strong>Graduada en Desarrollo de Aplicaciones Multiplataforma (DAM)</strong> y actualmente curso una
-      <em>Especialización en Inteligencia Artificial y Big Data</em>. Me apasiona crear soluciones backend bien estructuradas con tecnologías como <strong>Java, Spring Boot y SQL</strong>. Busco combinar técnica y claridad para construir software útil, limpio y mantenible.
-    </p>
-  </div>
-</section>
-
-
-  <section class="skills section" id="tecnologias">
-    <div class="container">
-      <h2>Tecnologías</h2>
-      <div class="tech-icons">
-        <span>Java</span><span>Spring Boot</span><span>SQL</span><span>MySQL</span><span>PostgreSQL</span>
-        <span>Docker</span><span>Git</span><span>GitHub</span><span>Swagger</span><span>HTML</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="projects section" id="proyectos">
-    <div class="container">
-      <h2>Proyectos</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="images/app-gestion-usuario-banner.png" alt="APP Gestión Usuario">
-          <h3>APP Gestión Usuario</h3>
-          <p>API REST para gestionar usuarios y roles.</p>
-          <a href="https://github.com/LauraArvez/app-gestion-usuario" target="_blank">Ver en GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="images/API-CRUD-Basic-banner.png" alt="API CRUD Básica">
-          <h3>API CRUD Básica</h3>
-          <p>Operaciones básicas CRUD con Java + Spring Boot.</p>
-          <a href="https://github.com/LauraArvez/api-crud-basic" target="_blank">Ver en GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="images/udp-juego-ahorcado-banner.png" alt="Juego UDP">
-          <h3>UDP - Juego del Ahorcado</h3>
-          <p>Juego clásico de consola con sockets UDP.</p>
-          <a href="https://github.com/LauraArvez/udp-juego-ahorcado" target="_blank">Ver en GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="images/balance-webapp-banner.png" alt="Balance Your Life">
-          <h3>Balance Your Life</h3>
-          <p>API REST basada en el modelo de Antoni Bolinches.</p>
-          <a href="https://github.com/LauraArvez/Balance-Your-Life-WebApp" target="_blank">Ver en GitHub</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact section" id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:arvezlau@hotmail.com">arvezlau@hotmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/lauraarvez" target="_blank">linkedin.com/in/lauraarvez</a></p>
-      <p>CV: <a href="assets/CV_LauraArvez.pdf" target="_blank">Descargar PDF</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Laura Arvez · Portfolio</p>
-  </footer>
 </body>
 </html>
