@@ -385,25 +385,6 @@ html {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .info-bloque-centrado {
-    gap: 2rem;
-    padding: 1rem;
-  }
-
-  .info-bloque-centrado .contact-columns {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-=======
-a {
-  transition: all 0.3s ease;
-}
-
-
-@media (max-width: 768px) {
->>>>>>> b1172f6367b8a9d92cc1c7b2809fb46aacb9aaa4
   .layout {
     flex-direction: column;
   }
@@ -411,87 +392,51 @@ a {
   .sidebar {
     position: relative;
     width: 100%;
-<<<<<<< HEAD
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
-  }
-
-  .sidebar .avatar {
-    width: 50px;
-    height: 50px;
-    margin: 0;
-=======
     height: auto;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
   }
 
   .sidebar .avatar {
     width: 60px;
     height: 60px;
-    margin-bottom: 0;
->>>>>>> b1172f6367b8a9d92cc1c7b2809fb46aacb9aaa4
+    margin: 0;
   }
 
   .side-nav ul {
     display: flex;
-<<<<<<< HEAD
     gap: 1rem;
     justify-content: flex-end;
-=======
-    flex-direction: row;
-    gap: 1rem;
+    width: 100%;
     margin: 0;
+    padding: 0;
   }
 
   .side-nav li {
     margin: 0;
->>>>>>> b1172f6367b8a9d92cc1c7b2809fb46aacb9aaa4
   }
 
   .content {
     margin-left: 0;
-<<<<<<< HEAD
     padding: 2rem 1.2rem;
-=======
-    padding: 2rem 1.5rem;
->>>>>>> b1172f6367b8a9d92cc1c7b2809fb46aacb9aaa4
   }
 
   .hero h1 {
     font-size: 2rem;
   }
 
-<<<<<<< HEAD
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-columns {
-    flex-direction: column;
-=======
   .tagline {
     font-size: 1rem;
->>>>>>> b1172f6367b8a9d92cc1c7b2809fb46aacb9aaa4
   }
 
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-<<<<<<< HEAD
-  .hero h1 {
-    font-size: 2rem;
-=======
   .section h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .section p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .tech-icons {
@@ -500,6 +445,30 @@ a {
 
   .tech-icons span {
     font-size: 0.85rem;
->>>>>>> b1172f6367b8a9d92cc1c7b2809fb46aacb9aaa4
+    padding: 0.4rem 0.6rem;
+  }
+
+  .project-grid.dos-filas {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .contact-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sidebar-text-fijo {
+    position: relative;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #eee;
+    width: 100%;
   }
 }
