@@ -9,7 +9,6 @@
   --font-text: 'Open Sans', sans-serif;
 }
 
-/* Estructura base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,7 +28,7 @@ body {
   min-height: 100vh;
 }
 
-/* Barra lateral (.sidebar) */
+/* ----------- SIDEBAR ----------- */
 .sidebar {
   width: var(--sidebar-width);
   background: var(--gradient);
@@ -45,22 +44,18 @@ body {
   justify-content: center;
 }
 
-
-/*Imagen de avatar*/
 .sidebar .avatar {
   width: 250px;
   height: 250px;
-  border-radius: 50%;  /* Círculo perfecto */
+  border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgb(241, 245, 244);
+  border: 2px solid white;
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* Menú de navegación */
 .side-nav ul {
   list-style: none;
-  padding: 00;
   width: 100%;
   text-align: center;
 }
@@ -78,10 +73,10 @@ body {
 }
 
 .side-nav a:hover {
-  color: var(--accent-color);  /* Efecto al pasar el cursor */
+  color: var(--accent-color);
 }
 
-/* Contenido principal */
+/* ----------- CONTENIDO PRINCIPAL ----------- */
 .content {
   margin-left: var(--sidebar-width);
   flex: 1;
@@ -90,7 +85,7 @@ body {
   margin: 0 auto;
 }
 
-/* Encabezado */
+/* ----------- PANTALLA INICIO ----------- */
 .hero {
   display: flex;
   flex-direction: column;
@@ -120,12 +115,7 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Secciones (Sobre mí, Tecnologías, etc.) */
-.section {
-  margin: 0; /* 6rem 0;*/
-}
-
-
+/* ----------- SECCIONES ----------- */
 .section h2 {
   font-family: var(--font-title);
   font-size: 1.5rem;
@@ -141,12 +131,12 @@ body {
   max-width: 800px;
 }
 
-/* Tecnologías (.tech-icons) */
+/* ----------- TECNOLOGÍAS ----------- */
 .tech-icons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 0.5rem; /*1rem;*/
+  margin-top: 0.5rem;
 }
 
 .tech-icons span {
@@ -158,39 +148,46 @@ body {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Proyectos */
+/* ----------- CONTACTO ----------- */
+.contact-columns {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.contact-columns p {
+  flex: 1;
+  min-width: 180px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-columns a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* ----------- PROYECTOS ----------- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3rm; /*2rem;*/
-  /*margin-top: 2rem;*/
-  align-items: start; /* importante para alinear desde arriba */
-}
-
-.project-grid.zigzag {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem 2rem; /* más espacio vertical entre filas */
-  align-items: start;
-}
-
-/* Añadir margen superior solo a las tarjetas pares para escalonar */
-.project-grid.zigzag .project-card:nth-child(2n) {
-  margin-top: 80px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .project-card {
-<<<<<<< HEAD
   background: #1e1e1e;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   text-align: center;
-
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* botón siempre abajo */
-  min-height: 280px; /* para que todas tengan la misma altura */
+  justify-content: space-between;
+  min-height: 280px;
 }
 
 .project-card img {
@@ -211,179 +208,40 @@ body {
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
   margin-top: auto;
 }
 
-.contacto-top {
-  background: none;
-  margin-top: 2rem;
-}
-
-.contacto-top h2 {
-  color: var(--accent-color);
-  margin-bottom: 1rem;
-}
-
-.contacto-top p a {
-  color: var(--main-color);
-  text-decoration: none;
-}
-
-
-.contact-columns {
-  display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
-  margin-top: 0.5rem; /*1rem;*/
-}
-
-.contact-columns p {
-  flex: 1;
-  min-width: 180px;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.contact-columns a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.pantalla-inicio {
-  min-height: 100vh; /* ocupa pantalla completa */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centrado vertical */
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 3rem 0;
-}
-
-.pantalla-inicio .section {
-  margin: 0;
-}
-
+/* ----------- LAYOUT DE PÁGINAS ----------- */
 .page {
-  /*height: 100vh;*/
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   scroll-snap-align: start;
   padding: 0 2rem;
-}
-
-.page.info-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  scroll-snap-align: start;
-  padding: 0 2rem;
-}
-
-.page .container-centrado {
-  width: 100%;
-  max-width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-=======
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100%;
-}
-
-
-.project-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  display: block;
-  margin: 0 auto 1rem;
-  object-fit: cover;
->>>>>>> b1172f6367b8a9d92cc1c7b2809fb46aacb9aaa4
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-<<<<<<< HEAD
-.page:target {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-
-.info-centralizada {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrado vertical */
-  gap: 3rem;
-  padding: 2rem;
-  width: 100%;
-  max-width: 900px;
-}
-
-.info-bloque-centrado {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  text-align: center;
-  gap: 3rem;
-  padding: 2rem;
-}
-
-.info-bloque-centrado .section {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.info-bloque-centrado .tech-icons {
-  justify-content: left;
-}
-
-.info-bloque-centrado .contact-columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 2rem;
-  margin-top: 0.5rem;
-  text-align: left;
-}
-
-.project-grid.dos-filas {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-  grid-template-rows: auto auto;        /* 2 filas automáticas */
-  gap: 2rem 3rem; /* vertical y horizontal */
-  justify-content: center;
-  margin-top: 2rem;
 }
 
 .container-centrado {
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 3rem;
 }
 
+.info-centralizada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
 
-/* RESPONSIVE */
+/* ----------- RESPONSIVE ----------- */
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -393,10 +251,8 @@ html {
     position: relative;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    height: auto;
+    justify-content: space-around;
+    padding: 1rem;
   }
 
   .sidebar .avatar {
@@ -409,9 +265,6 @@ html {
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
-    width: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   .side-nav li {
@@ -424,7 +277,7 @@ html {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .tagline {
@@ -436,25 +289,11 @@ html {
   }
 
   .section p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
-  .tech-icons {
-    justify-content: center;
-  }
-
-  .tech-icons span {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.6rem;
-  }
-
-  .project-grid.dos-filas {
-    grid-template-columns: 1fr; /* Una sola columna */
-    gap: 2rem;
-  }
-
-  .project-card {
-    width: 100%;
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .contact-columns {
@@ -463,12 +302,7 @@ html {
     text-align: center;
   }
 
-  .sidebar-text-fijo {
-    position: relative;
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #eee;
-    width: 100%;
+  .tech-icons {
+    justify-content: center;
   }
 }
