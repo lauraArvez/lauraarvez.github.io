@@ -1,240 +1,125 @@
-/*
-* LittleLink
-* https://littlelink.io
-* Free to use under the MIT license
-* http://www.opensource.org/licenses/mit-license.php
-*/
-
-/* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-	font-size:16px;
+  --main-color: #0066cc;
+  --accent-color: #20bcd5;
+  --bg-gradient: linear-gradient(to right, #0f62a1, #0f9cbf);
+  --light: #f9f9f9;
 }
 
-/* Grid
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .container {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;      /* 600px */
-    text-align:center;
-	margin:0 auto;
-	padding:3rem 1.25rem 0 1.25rem;
-	box-sizing:border-box;
-    flex: 1; /* Hace que el contenedor ocupe todo el espacio disponible */
-}
-.container-left {
-	position:relative;
-	width:100%;
-	max-width:37.5rem;
-	text-align:left;
-	margin:0 auto;
-	padding:0 1.25rem;
-	box-sizing:border-box;
-}
-.container-left p {
-	margin-bottom: 1rem;  /* 16px space between paragraphs */
-  }
-.column {
-	position:center;
-	width:100%;
-	float:center;
-	box-sizing:border-box;
-}
-/* For devices larger than 400px */
-  @media (min-width:25rem) {            /* 400px */
-    .container {
-	width:85%;
-	padding-left:0;
-	padding-right:0;
-}
-}/* For devices larger than 550px */
-  @media (min-width:34.375rem) {        /* 550px */
-    .container {
-	width:80%;
-}
-.column,.columns {
-	margin-left:0;
-}
-.column:first-child,.columns:first-child {
-	margin-left:0;
-}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Base Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  body {
-	margin:0;
-	padding:0;
-	background-color:#ffffff;
-	color:#1a1a1a;
-	font-family:"Open Sans",system-ui;
-	font-size:1.125rem;      /* 18px */
-    font-weight:400;
-	line-height:1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Asegura que el body ocupe toda la pantalla */
-}
-
-/* Typography
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  h1 {
-	margin:0 0 0.5rem 0;
-	font-size:3rem;          /* 48px */
-    font-weight:800;
-	line-height:1;
-	letter-spacing:0;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-	hyphens:auto;            /* Delete this to remove automatic hyphen on line break */
-}
-.container p {
-	margin:0 0 2rem 0;
-}
-
-/* Base Typography Settings
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* Base size - 16px browser default */
-:root {
-  font-size:16px;           /* Using a 1.25 modular scale for typography */
-  --scale-0:1rem;           /* 16px */
-  --scale-1:1.25rem;        /* 20px */
-  --scale-2:1.563rem;       /* 25px */
-  --scale-3:1.953rem;       /* 31px */
-  --scale-4:2.441rem;       /* 39px */
-  --scale-5:3.052rem;       /* 49px */
-
-  /* Spacing units */
-  --spacing-xs:0.5rem;      /* 8px */
-  --spacing-s:1rem;         /* 16px */
-  --spacing-m:1.5rem;       /* 24px */
-  --spacing-l:2rem;         /* 32px */
-  --spacing-xl:3rem;        /* 48px */
-  --spacing-xxl:4rem;       /* 64px */
-}
-
-/* Avatar */
-.avatar {
-	width: 8rem;             /* 128px */
-	height: 8rem;
-	border-radius: 50%;
-	object-fit: cover;
-	background-position: center;
-	margin-bottom: var(--spacing-l);
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-  }
-
-/* Typography Scale */
-h1 {
-	margin:0 0 var(--spacing-m) 0;
-	font-size:var(--scale-5);           /* ~49px */
-  	font-weight:800;
-	line-height:1.1;
-	letter-spacing:-0.02em;
-	word-wrap:break-word;
-	overflow-wrap:break-word;
-}
 body {
-	/*font-size:var(--scale-1);           /* 20px */
-	/*line-height:1.6;*/
-	background: linear-gradient(135deg, #000000, #00ebf4, #000000,#00ebf4); /* Colores del logo */
-    background-size: 300% 300%; /* Para un efecto más dinámico */
-    background-attachment: fixed; /* Fija el fondo */
-    animation: gradient-animation 10s ease infinite; /* Animación opcional */
-    color: #ffffff;
-    font-family: "Open Sans", system-ui, sans-serif;
-    margin: 0;
-    padding: 0;
+  background: var(--light);
+  color: #1a1a1a;
+  line-height: 1.6;
 }
 
-/* Animación opcional del gradiente */
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-	
-.container p {
-	margin:0 0 var(--spacing-xl) 0;
-	font-size:var(--scale-1);
-	line-height:1.6;
-}
-
-/* Container spacing */
 .container {
-	padding:var(--spacing-xl) var(--spacing-m) 0 var(--spacing-m);
-	text-align:center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* Footer */
+header.hero {
+  background: var(--bg-gradient);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+header.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+header.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+.about p {
+  font-size: 1rem;
+  max-width: 720px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tech-list span {
+  background: var(--main-color);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+}
+
+.projects {
+  margin-top: 3rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.project img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.project h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+}
+
+.contact p, .contact a {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
 footer {
-    text-align: center; /* Asegura que el texto esté centrado */
-    padding: 1rem 0; /* Espaciado interno */
-    font-size: 0.875rem; /* Tamaño del texto */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    margin-top: auto; /* Coloca el footer al final */
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  margin-top: 4rem;
 }
 
-/* Responsive adjustments */
-@media (max-width:34.375rem) {              /* 550px */
-  h1 {
-	font-size:var(--scale-4);
-}
-body {
-	font-size:var(--scale-0);
-}
-.container p {
-	font-size:var(--scale-0);
-}
-.avatar {
-	margin-bottom:var(--spacing-m);
-}
-footer {
-	margin:var(--spacing-xl) 0;         /* 3rem (48px) top and bottom */
-	
-}
-}
+@media (max-width: 768px) {
+  header.hero h1 {
+    font-size: 2rem;
+  }
 
-/* Links
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  a {
-	color:#2457F5;
-	text-decoration:underline;
-}
-a:hover {
-	color:#083BDA;
-}
-
-/* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button,button {
-	display:inline-flex;
-	align-items:center;
-	justify-content:center;
-	width:18.75rem;              /* 300px */
- 	min-height:3rem;                /* 48px */
-  	padding:0.75rem 1rem;          /* 12px ; 16px */
-  	font-size:1.125rem;            /* 18px */
-  	font-weight:700;
-	text-decoration:none;
-	white-space:normal;
-  	background-color:var(--button-background,transparent);
-	color:var(--button-text,#000000);
-	border:var(--button-border,none);
-	border-radius:0.5rem;
-	cursor:pointer;
-	box-sizing:border-box;
-	hyphens:auto;                /* Delete this to remove automatic hyphen on line break */
-  	margin-bottom:2rem;
-	text-align:center;
-	line-height:1.3;
+  .tech-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
