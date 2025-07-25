@@ -1,47 +1,80 @@
 <!DOCTYPE html>
-<html class="theme-dark" lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="images/avatar_la.png">
-    <title>Laura Arvez</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/brands.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laura Arvez | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
+  <header class="hero">
     <div class="container">
-        <div class="column">
-            <!-- Logo Section -->
-            <img class="avatar avatar--rounded" src="images/avatar_150.png" alt="Laura Arvez Logo">
-            <p tabindex="0" style="text-align:center;">Desarrolladora Java | Spring Boot | SQL </p>
-
-            <!-- Botones Section -->
-            <div class="button-stack" role="navigation">
-                
-                <a class="button button-linked" href="https://www.linkedin.com/in/lauraarvez" target="_blank" rel="noopener">
-                    <img class="icon" aria-hidden="true" src="images/icons/linkedin.svg" alt="LinkedIn Icon">LinkedIn
-                </a>
-                <a class="button button-portfolio" href="https://github.com/lauraArvez/portfolio" target="_blank" rel="noopener">
-                    <img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Icon">Portfolio
-                </a>
-                <!-- <a class="button button-blog" href="#" target="_blank" rel="noopener">
-                    <img class="icon" aria-hidden="true" src="images/icons/generic-blog.svg" alt="Blog Icon">Blog
-                </a> -->
-                <!-- <a class="button button-certificados" href="https://github.com/lauraArvez/Certificados_Cursos" target="_blank" rel="noopener">
-                    <img class="icon" aria-hidden="true" src="images/icons/generic-certificates.svg" alt="Certificates Icon">Cursos
-                </a>-->
-                
-            </div>
-        </div>
+      <h1>Laura Arvez</h1>
+      <p>Desarrolladora Java orientada a backend con APIs REST, Spring Boot y bases de datos</p>
     </div>
+  </header>
 
-    <footer>
-        <p tabindex="0" style="text-align:center;">© 2024 Laura Arvez. Página creada con <a href="https://littlelink.io" target="_blank" rel="noopener">LittleLink</a>.</p>
-    </footer>
-    
+  <section class="about container">
+    <h2>¡Hola!</h2>
+    <p>
+      Soy graduada en Desarrollo de Aplicaciones Multiplataforma (DAM), actualmente cursando una especialización en Inteligencia Artificial y Big Data. Me apasiona construir soluciones backend con Java, Spring Boot y SQL. También tengo experiencia en diseño de APIs RESTful, bases de datos y herramientas modernas como Docker y GitHub.
+    </p>
+  </section>
+
+  <section class="tech container">
+    <h2>Tecnologías</h2>
+    <div class="tech-list">
+      <span>Java</span>
+      <span>Spring Boot</span>
+      <span>SQL</span>
+      <span>MySQL</span>
+      <span>PostgreSQL</span>
+      <span>Docker</span>
+      <span>Git</span>
+      <span>GitHub</span>
+      <span>Swagger</span>
+      <span>HTML</span>
+    </div>
+  </section>
+
+  <section class="projects container">
+    <h2>Proyectos Destacados</h2>
+    <div class="project">
+      <img src="assets/img/app-gestion-usuario-banner.png" alt="APP Gestion Usuario" />
+      <h3>APP Gestión Usuario</h3>
+      <p>Gestión de usuarios, roles y contraseñas mediante Spring Boot y REST API.</p>
+      <a href="https://github.com/LauraArvez/app-gestion-usuario" target="_blank">Ver en GitHub</a>
+    </div>
+    <div class="project">
+      <img src="assets/img/api-crud-basic-banner.png" alt="API CRUD Básica" />
+      <h3>API CRUD Básica</h3>
+      <p>Operaciones básicas para crear, leer, actualizar y eliminar entidades.</p>
+      <a href="https://github.com/LauraArvez/api-crud-basic" target="_blank">Ver en GitHub</a>
+    </div>
+    <div class="project">
+      <img src="assets/img/udp-juego-ahorcado-banner.png" alt="UDP Ahorcado" />
+      <h3>UDP - Juego del Ahorcado</h3>
+      <p>Juego clásico con comunicación cliente-servidor vía UDP.</p>
+      <a href="https://github.com/LauraArvez/udp-juego-ahorcado" target="_blank">Ver en GitHub</a>
+    </div>
+    <div class="project">
+      <img src="assets/img/balance-your-life-banner.png" alt="Balance Your Life" />
+      <h3>Balance Your Life</h3>
+      <p>API REST inspirada en el modelo de Antoni Bolinches. Arquitectura Hexagonal.</p>
+      <a href="https://github.com/LauraArvez/Balance-Your-Life-WebApp" target="_blank">Ver en GitHub</a>
+    </div>
+  </section>
+
+  <section class="contact container">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:arvezlau@hotmail.com">arvezlau@hotmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/lauraarvez" target="_blank">linkedin.com/in/lauraarvez</a></p>
+    <p>CV: <a href="assets/CV_LauraArvez.pdf" target="_blank">Descargar PDF</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Laura Arvez · Portfolio personal</p>
+  </footer>
 </body>
-
 </html>
