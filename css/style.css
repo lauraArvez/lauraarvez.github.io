@@ -242,14 +242,13 @@ body {
 }
 
 /* ----------- RESPONSIVE ----------- */
-/* ----------- RESPONSIVE ----------- */
 @media (max-width: 768px) {
   .layout {
-    flex-direction: row; /* ¡Mantenemos la estructura de escritorio! */
+    flex-direction: row;
   }
 
   .sidebar {
-    width: 80px; /* Más estrecha pero sigue vertical */
+    width: 80px;
     padding: 1rem 0.5rem;
     justify-content: flex-start;
     align-items: center;
@@ -290,19 +289,43 @@ body {
 
   .section p {
     font-size: 0.95rem;
+    text-align: left;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr;
+  .info-centralizada {
+    align-items: flex-start;
   }
 
   .contact-columns {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .contact-columns p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-columns p strong {
+    display: none;
+  }
+
+  .contact-columns a {
+    display: inline;
+    font-weight: normal;
   }
 
   .tech-icons {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .tech-icons span {
+    font-size: 0.85rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 }
