@@ -28,7 +28,7 @@ body {
   min-height: 100vh;
 }
 
-/* ----------- SIDEBAR ----------- */
+/* ----------- SIDEBAR (solo visible en escritorio) ----------- */
 .sidebar {
   width: var(--sidebar-width);
   background: var(--gradient);
@@ -76,6 +76,7 @@ body {
   color: var(--accent-color);
 }
 
+
 /* ----------- CONTENIDO PRINCIPAL ----------- */
 .content {
   margin-left: var(--sidebar-width);
@@ -84,6 +85,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 
 /* ----------- PANTALLA INICIO ----------- */
 .hero {
@@ -115,6 +117,7 @@ body {
   margin-top: 0.5rem;
 }
 
+
 /* ----------- SECCIONES ----------- */
 .section h2 {
   font-family: var(--font-title);
@@ -130,6 +133,7 @@ body {
   line-height: 1.7;
   max-width: 800px;
 }
+
 
 /* ----------- TECNOLOGÍAS ----------- */
 .tech-icons {
@@ -147,6 +151,7 @@ body {
   font-size: 0.9rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 
 /* ----------- CONTACTO ----------- */
 .contact-columns {
@@ -168,6 +173,7 @@ body {
   text-decoration: none;
   font-weight: 400;
 }
+
 
 /* ----------- PROYECTOS ----------- */
 .project-grid {
@@ -211,6 +217,7 @@ body {
   margin-top: auto;
 }
 
+
 /* ----------- LAYOUT DE PÁGINAS ----------- */
 .page {
   display: flex;
@@ -241,38 +248,86 @@ body {
   max-width: 900px;
 }
 
-/* ----------- RESPONSIVE ----------- */
+
+/* ========== NUEVA NAVBAR MÓVIL ========== */
+.mobile-navbar {
+  display: none;
+}
+
+/*.top-navbar {
+  display: none;
+  background: var(--gradient);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.top-nav li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}*/
+
+
+/* ========== RESPONSIVE PARA MÓVIL ========== */
 @media (max-width: 768px) {
-  .layout {
-    flex-direction: row;
-  }
-
+  /* Oculta el sidebar tradicional */
   .sidebar {
-    width: 80px;
-    padding: 1rem 0.5rem;
-    justify-content: flex-start;
-    align-items: center;
+    display: none;
   }
 
-  .sidebar .avatar {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-  }
-
-  .side-nav ul {
+  /* Muestra navbar superior en móvil */
+  .mobile-navbar {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background: var(--gradient);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
   }
 
-  .side-nav a {
-    font-size: 1rem;
+  .avatar-mobile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid white;
   }
 
+  .nav-mobile ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-mobile a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  /* Ajustes para que no se oculte contenido tras la navbar móvil */
   .content {
-    margin-left: 80px;
-    padding: 2rem 1rem;
+    margin-left: 0;
+    padding-top: 4rem;
   }
 
   .hero h1 {
@@ -294,6 +349,7 @@ body {
 
   .info-centralizada {
     align-items: flex-start;
+    text-align: left;
   }
 
   .contact-columns {
@@ -318,7 +374,8 @@ body {
   }
 
   .tech-icons {
-    justify-content: flex-start;
+    gap: 0.5rem;
+    font-size: 0.85rem;
   }
 
   .tech-icons span {
@@ -328,4 +385,15 @@ body {
   .project-grid {
     grid-template-columns: 1fr;
   }
+
+  /* 🔧 Código anterior innecesario (comentado) */
+  /*
+  .top-navbar {
+    display: none;
+  }
+
+  .top-nav ul, .top-nav {
+    display: none;
+  }
+  */
 }
