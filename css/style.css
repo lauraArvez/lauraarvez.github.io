@@ -288,13 +288,15 @@ body {
   min-height: auto;           /* quitamos la altura mínima */
 }
 
-/* Banner: altura fija cómoda, recorte limpio si difiere de proporción */
+* BANNERS: ver la imagen completa (sin recorte) */
 .projects .project-card img{
   width: 100%;
-  height: 110px;          /* ajusta 100–130px a tu gusto */
-  object-fit: cover;
+  height: 120px;           /* ajusta 110–140px a gusto */
+  object-fit: contain;     /* << antes estaba 'cover' */
+  display: block;
+  background: #0f0f0f;     /* “letterbox” discreto si sobra espacio */
   border-radius: 6px;
-  margin: 0;              /* sin margen extra */
+  margin: 0;
 }
 
 /* Ocultamos títulos y descripciones (no tocamos el HTML) */
