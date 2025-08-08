@@ -175,54 +175,12 @@ body {
 }
 
 
-/* ----------- PROYECTOS ----------- */
-/*.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 3rem;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.project-card {
-  background: #1e1e1e;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 280px;
-}
-
-.project-card img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 0.8rem;
-}
-
-.project-card h3 {
-  color: var(--main-color);
-  margin-bottom: 0.5rem;
-}
-
-.project-card a {
-  background: var(--accent-color);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: auto;
-}*/
 
 /* ----------- PROYECTOS (imagen + botón, 3+2 en desktop, 1 por fila en móvil) ----------- */
 .project-grid{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;      /* centra la 2ª fila con 2 tarjetas */
-  gap: 1.5rem 2rem;             /* vertical / horizontal */
+  display: grid;
+  grid-template-columns: repeat(5, minmax(220px, 1fr)); /* 5 por fila en escritorio ancho */
+  gap: 1.5rem 2rem;   /* vertical / horizontal */
   margin-top: 1.5rem;
 }
 
@@ -233,33 +191,29 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   padding: 0.75rem;
 
-  display: flex;
+  display: flex;             /* para pegar el botón abajo */
   flex-direction: column;
-  align-items: stretch;
-
-  /* Tamaño pensado para 3 en fila (≈300px) y 2ª fila centrada */
-  flex: 0 1 280px;              /* base ~280px, puede encoger un poco */
-  max-width: 300px;
-  height: 220px;                /* ALTO FIJO para alinear botones y quepan 2 filas */
 }
 
-/* Si dejaste h3/p en el HTML, se ocultan para usar solo el banner */
+/* Ocultamos título/desc si los dejas en el HTML */
 .project-card h3,
 .project-card p{
   display: none;
 }
 
+/* BANNERS: ver la imagen completa (sin recorte) */
 .project-card img{
   width: 100%;
-  height: 150px;                /* fija el alto de la imagen para cuadrar la tarjeta */
+  height: auto;         /* <- NO fijo */
+  object-fit: contain;  /* <- NO recortes */
   border-radius: 6px;
-  object-fit: cover;            /* recorte limpio del banner */
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  background:#0f0f0f;   /* si sobra espacio a los lados */
 }
 
-/* Botón alineado abajo en todas las tarjetas */
+/* Botón siempre al final */
 .project-card a{
-  margin-top: auto;             /* empuja el botón al fondo */
+  margin-top: auto;
   align-self: center;
   background: var(--accent-color);
   color: #fff;
@@ -287,7 +241,7 @@ body {
 }
 
 
-* BANNERS: ver la imagen completa (sin recorte) */
+/* BANNERS: ver la imagen completa (sin recorte) */
 .projects .project-card img {
   width: 100%;
   max-width: 100%;       /* que use todo el ancho disponible */
@@ -478,22 +432,21 @@ body {
     grid-template-columns: 1fr;
   }*/
 
-  /* ====== RESPONSIVE PARA PROYECTOS ====== */
-  /* 4 columnas */
+  
+  /* ===== Breakpoints (NO anidados) ===== */
   @media (max-width: 1200px){
-    .projects .project-grid{ grid-template-columns: repeat(4, minmax(170px,1fr)); }
+    .project-grid{ grid-template-columns: repeat(4, minmax(220px,1fr)); }
   }
-  /* 3 columnas */
+  
   @media (max-width: 992px){
-    .projects .project-grid{ grid-template-columns: repeat(3, minmax(170px,1fr)); }
+    .project-grid{ grid-template-columns: repeat(3, minmax(220px,1fr)); }
   }
-  /* 2 columnas */
+  
   @media (max-width: 680px){
-    .projects .project-grid{ grid-template-columns: repeat(2, minmax(150px,1fr)); }
-    .projects .project-card img{ height: 100px; } /* un pelín más compacto en móvil */
+    .project-grid{ grid-template-columns: repeat(2, minmax(180px,1fr)); }
   }
-  /* 1 columna */
-  @media (max-width: 420px){
-    .projects .project-grid{ grid-template-columns: 1fr; }
+  
+  @media (max-width: 480px){
+    .project-grid{ grid-template-columns: 1fr; }
   }
 }
