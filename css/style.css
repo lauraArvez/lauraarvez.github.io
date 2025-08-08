@@ -268,6 +268,7 @@ body {
   text-decoration: none;
   font-weight: 700;
 }
+
 /* ==== COMPACCIÓN DE TARJETAS DE PROYECTOS ==== */
 
 /* 5 por fila en escritorio ancho */
@@ -277,26 +278,24 @@ body {
   gap: 1.25rem;
 }
 
-/* Tarjeta compacta: sin “hueco”, sin separar a la fuerza el botón */
-.projects .project-card{
+/* Ajuste de tarjetas para que los banners se vean completos */
+.projects .project-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* ya no empuja el botón al fondo */
-  gap: .75rem;
-  padding: .9rem;
-  min-height: auto;           /* quitamos la altura mínima */
+  padding: 0.8rem;
 }
 
+
 * BANNERS: ver la imagen completa (sin recorte) */
-.projects .project-card img{
+.projects .project-card img {
   width: 100%;
-  height: 120px;           /* ajusta 110–140px a gusto */
-  object-fit: contain;     /* << antes estaba 'cover' */
-  display: block;
-  background: #0f0f0f;     /* “letterbox” discreto si sobra espacio */
+  max-width: 100%;       /* que use todo el ancho disponible */
+  height: auto;          /* para no deformar el banner */
+  object-fit: contain;   /* mostrar imagen completa */
+  background-color: #0f0f0f; /* fondo neutro si sobra espacio */
   border-radius: 6px;
-  margin: 0;
+  margin-bottom: 0.8rem;
 }
 
 /* Ocultamos títulos y descripciones (no tocamos el HTML) */
@@ -305,9 +304,9 @@ body {
   display: none;
 }
 
-/* Botón pegado al contenido (ya no “auto” hacia abajo) */
-.projects .project-card a{
-  margin-top: 0;
+/* Botón siempre al final */
+.projects .project-card a {
+  margin-top: auto;
 }
 
 
